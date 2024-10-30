@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+.custom-card {
+  background-color: rgba(228, 228, 228, 0.8);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #000;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+mat-card {
+  width: 100%;
+  margin-bottom: 30px;
+  height: auto;
+
+
+}

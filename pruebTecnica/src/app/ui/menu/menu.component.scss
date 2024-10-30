@@ -1,0 +1,24 @@
+.navbar {
+  background-color: #f8f9fa;
+  height: 60px;
+  padding: 40px 0; // Ajusta el padding superior e inferior para hacerla más ancha
+
+  .navbar-brand {
+    color: #343a40;
+    font-size: 2rem;
+    padding: 15px 20px;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      font-size: 1.5rem;
+      color: #007bff;
+      padding: 15px 20px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+}
