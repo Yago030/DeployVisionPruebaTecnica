@@ -19,8 +19,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { MovieService } from '../domain/services/MovieService.service';
-import { GetPopularMovieTitlesUseCase } from '../domain/useCases/getPopularMovieTitlesUseCase';
-import { SeriesComponent } from './series/series.component';
+import { GetPopularMovieTitlesUseCase } from '../domain/useCases/GetPopularMovieTitlesUseCase';
+import { EstrenosComponent } from './estrenos/estrenos.component';
+import { NowPlayingService } from '../domain/services/NowPlaying.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { SeriesComponent } from './series/series.component';
     CardButtonsComponent,
     MenuComponent,
     FooterComponent,
-    SeriesComponent,
+    EstrenosComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +46,13 @@ import { SeriesComponent } from './series/series.component';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync(),
     MovieService,
-    GetPopularMovieTitlesUseCase
+    GetPopularMovieTitlesUseCase,
+    NowPlayingService
   ],
   bootstrap: [AppComponent]
 })

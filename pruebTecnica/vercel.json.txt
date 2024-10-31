@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "build": {
+    "command": "ng build --prod",
+    "directory": "dist/pruebaTecnica"
+  },
+  "routes": [
+    {
+      "src": "/**",
+      "dest": "/index.html"
+    }
+  ]
+}

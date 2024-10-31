@@ -14,7 +14,6 @@ export class MovieService {
       const response = await axios.get(`${this.apiUrl}/movie/popular?api_key=${this.apiKey}`);
       return response.data.results;
     } catch (error) {
-      console.error('Error al obtener las películas:', error);
       throw error;
     }
   }

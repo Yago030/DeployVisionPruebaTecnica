@@ -1,12 +1,18 @@
+<!-- card-container.component.html -->
 <div class="container my-5">
   <mat-card fxFlex="100%">
-    <mat-card-content class="custom-card">Películas populares</mat-card-content>
+    <mat-card-content class="custom-card">
+      {{ pageTitle }}
+    </mat-card-content>
   </mat-card>
   <div class="row justify-content-center">
-    <div class="col-md-4 mb-4" *ngFor="let card of card | slice:0:9; let i = index">
+    <div class="col-md-4 mb-4" *ngFor="let title of card | slice:0:9; let i = index">
       <app-card>
-        <app-card-title [title]="card"></app-card-title>
-        <app-card-image [src]="posterUrls[i]" alt="{{this.card}} poster"></app-card-image>
+        <app-card-title [title]="title"></app-card-title>
+        <app-card-image
+          [src]="posterUrls[i]"
+          [alt]="title + ' poster'">
+        </app-card-image>
         <app-card-description [description]="overviews[i]"></app-card-description>
         <app-card-buttons></app-card-buttons>
       </app-card>
